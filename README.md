@@ -89,3 +89,10 @@ bool result = License<Customer>.ValidateAgainst(xmlLicense, out License<Customer
 	For(x => x.MachineGuid == GetMachineGuid(), "MachineGuid"). // Custom validation against our hardware ID. GetMachineGuid() is a call to a function wich creates a unique hardware ID for the current system.
 	Verify(); // Finally verifying your license with its embedded signature.
 ```
+## Weakness
+This framework is very strong and makes generating licenses for unauthorized parties practical impossible.
+Also the source code of this library or your program can be visited by the public without any harm. Of course if you store your private keys safely.
+
+Unauthorized parties however could decompile your program or this library, disable the validation checks with the well known *NOOP* operation and compile back the result. So they'll get a "cracked" version of your program. This library applies no code obfuscation (or other protection strategies) to your code - this is what you have to do at your own.
+
+**Accordingly this library is not responsible for protecting your work for such (or similar) attacks!**
