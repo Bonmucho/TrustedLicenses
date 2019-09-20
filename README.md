@@ -1,20 +1,22 @@
-# TrustedLicenses - A lightweight .NET Licensing Framework
-> 📜 License your goods - trust in TrustedLicenses!
+<img src="https://image.flaticon.com/icons/svg/2127/2127440.svg" width="48"><span style="font-family:Segoe UI;font-size:48px;font-weight:lighter"> <span style="color:#1E90FF">Trusted</span><span style="color:#AAAAAA">Licenses</span></span>
+
+# <span style="font-family:Segoe UI"><span style="color:#1E90FF">Trusted</span><span style="color:#AAAAAA">Licenses</span></span> - *A lightweight .NET Licensing Framework*
+> 📜 License your goods - trust in <span style="font-family:Segoe UI;font-weight:lighter;"> <span style="color:#1E90FF">Trusted</span><span style="color:#AAAAAA">Licenses</span></span>!
 
 ## Features
-- **Client-sided** Licensing Framework (*no need to query server*)
-- **Secure**, **reliable** and **extensible**
-- **Simple** and easy to use
-- **Minimal**, **fast** and **efficient**
-- 100% managed C# code for **.NET 4.5+**
-- Latest security technologies, using **DSA** and **RSA** signature algorithms
-- **High platform compatibility** through use of international presentation standards, such as:
+- ✅ **Client-sided** Licensing Framework (*no need to query server*)
+- 🔑 **Secure**, **reliable** and **extensible**
+- ✅ **Simple** and easy to use
+- ✅ **Minimal**, **fast** and **efficient**
+- ✅ 100% managed C# code for **.NET 4.5+**
+- 🔐 Latest security technologies, using **DSA** and **RSA** signature algorithms
+- ✅ **High platform compatibility** through use of international presentation standards, such as:
 	- **DSA** and **RSA** signature algorithms
 	- **SHA** hashing algorithms
 	- **XML version 1.0** for actual license
 	- Exclusive XML Canonicalization **XML-C14N**
-- Easy license creation through use of LicenseBuilder
-- Easy license validation with validation chain
+- ✅ Easy license creation through use of LicenseBuilder
+- ✅ Easy license validation with validation chain
 
 ## How to use TrustedLicenses
 
@@ -89,6 +91,11 @@ bool result = License<Customer>.ValidateAgainst(xmlLicense, out License<Customer
 	For(x => x.MachineGuid == GetMachineGuid(), "MachineGuid"). // Custom validation against our hardware ID. GetMachineGuid() is a call to a function wich creates a unique hardware ID for the current system.
 	Verify(); // Finally verifying your license with its embedded signature.
 ```
+
+## Changelog
+
+> There is no changelog available until **Release 1.0**.
+
 ## Weakness
 This framework is very strong and makes generating licenses for unauthorized parties practical impossible.
 Also the source code of this library or your program can be visited by the public without any harm. Of course if you store your private keys safely.
@@ -96,3 +103,9 @@ Also the source code of this library or your program can be visited by the publi
 Unauthorized parties however could decompile your program or this library, disable the validation checks with the well known *NOOP* operation and compile back the result. So they'll get a "cracked" version of your program. This library applies no code obfuscation (or other protection strategies) to your code - this is what you have to do at your own.
 
 **Accordingly this library is not responsible for protecting your work for such (or similar) attacks!**
+
+## Credits
+
+### Flaticon
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/itim2101" title="itim2101">itim2101</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>

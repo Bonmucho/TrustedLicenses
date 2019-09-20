@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{673C04ED-3539-4511-837D-BEAB69FB653F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>System</RootNamespace>
-    <AssemblyName>TrustedLicenses</AssemblyName>
+    <ProjectGuid>{F013DC2C-A18B-4217-83A1-3149DB2C3E2F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TrustedLicenses.Example</RootNamespace>
+    <AssemblyName>TrustedLicenses.Example</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,16 +21,15 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\TrustedLicenses.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\TrustedLicenses.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>copyright.ico</ApplicationIcon>
@@ -38,9 +37,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,17 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Security.Licensing\License.cs" />
-    <Compile Include="Security.Licensing\LicenseBuilder.cs" />
-    <Compile Include="Security.Licensing\LicenseValidationException.cs" />
-    <Compile Include="Security.Licensing\LicenseValidator.cs" />
-    <Compile Include="Security.Licensing\ModuleVersion.cs" />
-    <Compile Include="Security.Licensing\ValidationFault.cs" />
-    <Compile Include="Security.Licensing\XmlSigner.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="copyright.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrustedLicenses\TrustedLicenses.csproj">
+      <Project>{673c04ed-3539-4511-837d-beab69fb653f}</Project>
+      <Name>TrustedLicenses</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
